@@ -1,0 +1,105 @@
+
+openssl s_client -connect google.com:443 </dev/null 2>/dev/null | openssl x509 -noout -text > openssl-google.com_443-trace-ssl-detail.txt
+
+Certificate:
+    Data:
+        Version: 3 (0x2)
+        Serial Number:
+            4b:98:0f:40:2c:31:7d:4b:12:08:3c:ef:9a:69:ba:e5
+    Signature Algorithm: sha256WithRSAEncryption
+        Issuer: C=US, O=Google Trust Services LLC, CN=GTS CA 1C3
+        Validity
+            Not Before: May 21 05:32:03 2024 GMT
+            Not After : Aug 13 05:32:02 2024 GMT
+        Subject: CN=*.google.com
+        Subject Public Key Info:
+            Public Key Algorithm: rsaEncryption
+                Public-Key: (2048 bit)
+                Modulus:
+                    00:b0:8b:45:c4:2c:43:08:81:ff:2d:fa:a7:4b:68:
+                    33:9f:7d:5b:7b:5d:fa:30:43:b2:11:23:81:8f:52:
+                    e4:72:e9:f2:64:31:4e:57:4e:90:11:e8:f6:ea:08:
+                    1e:a3:5e:d5:98:5a:20:b0:61:b7:46:9b:76:36:87:
+                    64:85:b6:bf:06:ca:d4:66:f2:7f:42:af:41:3e:99:
+                    43:33:5c:cc:31:8d:e7:d2:48:60:bb:bc:ac:b1:fb:
+                    ad:ba:9c:42:61:1f:35:d4:a5:b5:32:00:5e:ad:85:
+                    2c:c4:40:d9:0d:79:dc:c3:9a:78:4e:10:77:f8:e9:
+                    0e:7d:fd:7d:a5:41:f5:2a:b3:25:44:ec:29:ba:44:
+                    79:5f:23:47:aa:ec:a4:ef:a7:85:04:84:f9:f1:b1:
+                    a5:00:f5:fa:47:36:7b:40:55:d3:9d:63:7a:aa:55:
+                    62:c3:05:30:91:c6:a8:aa:54:26:4c:37:08:34:f9:
+                    c4:8e:b5:f7:43:f2:d8:8c:67:a1:08:b4:11:8a:0e:
+                    96:92:36:e7:81:f6:34:bb:7b:8f:b1:f3:34:8d:c2:
+                    27:4e:04:33:fc:34:76:e4:78:5b:0a:e5:2b:96:24:
+                    7d:d9:f3:d5:17:74:ac:e3:ce:de:c2:c5:50:21:6d:
+                    c3:e1:96:83:64:33:07:90:f8:29:e7:c2:ae:94:10:
+                    8e:0f
+                Exponent: 65537 (0x10001)
+        X509v3 extensions:
+            X509v3 Key Usage: critical
+                Digital Signature, Key Encipherment
+            X509v3 Extended Key Usage: 
+                TLS Web Server Authentication
+            X509v3 Basic Constraints: critical
+                CA:FALSE
+            X509v3 Subject Key Identifier: 
+                86:7A:4B:59:47:66:79:23:F9:F6:F2:6E:CA:28:0E:39:39:91:68:0A
+            X509v3 Authority Key Identifier: 
+                keyid:8A:74:7F:AF:85:CD:EE:95:CD:3D:9C:D0:E2:46:14:F3:71:35:1D:27
+
+            Authority Information Access: 
+                OCSP - URI:http://ocsp.pki.goog/gts1c3
+                CA Issuers - URI:http://pki.goog/repo/certs/gts1c3.der
+
+            X509v3 Subject Alternative Name: 
+                DNS:*.google.com, DNS:*.appengine.google.com, DNS:*.bdn.dev, DNS:*.origin-test.bdn.dev, DNS:*.cloud.google.com, DNS:*.crowdsource.google.com, DNS:*.datacompute.google.com, DNS:*.google.ca, DNS:*.google.cl, DNS:*.google.co.in, DNS:*.google.co.jp, DNS:*.google.co.uk, DNS:*.google.com.ar, DNS:*.google.com.au, DNS:*.google.com.br, DNS:*.google.com.co, DNS:*.google.com.mx, DNS:*.google.com.tr, DNS:*.google.com.vn, DNS:*.google.de, DNS:*.google.es, DNS:*.google.fr, DNS:*.google.hu, DNS:*.google.it, DNS:*.google.nl, DNS:*.google.pl, DNS:*.google.pt, DNS:*.googleapis.cn, DNS:*.googlevideo.com, DNS:*.gstatic.cn, DNS:*.gstatic-cn.com, DNS:googlecnapps.cn, DNS:*.googlecnapps.cn, DNS:googleapps-cn.com, DNS:*.googleapps-cn.com, DNS:gkecnapps.cn, DNS:*.gkecnapps.cn, DNS:googledownloads.cn, DNS:*.googledownloads.cn, DNS:recaptcha.net.cn, DNS:*.recaptcha.net.cn, DNS:recaptcha-cn.net, DNS:*.recaptcha-cn.net, DNS:widevine.cn, DNS:*.widevine.cn, DNS:ampproject.org.cn, DNS:*.ampproject.org.cn, DNS:ampproject.net.cn, DNS:*.ampproject.net.cn, DNS:google-analytics-cn.com, DNS:*.google-analytics-cn.com, DNS:googleadservices-cn.com, DNS:*.googleadservices-cn.com, DNS:googlevads-cn.com, DNS:*.googlevads-cn.com, DNS:googleapis-cn.com, DNS:*.googleapis-cn.com, DNS:googleoptimize-cn.com, DNS:*.googleoptimize-cn.com, DNS:doubleclick-cn.net, DNS:*.doubleclick-cn.net, DNS:*.fls.doubleclick-cn.net, DNS:*.g.doubleclick-cn.net, DNS:doubleclick.cn, DNS:*.doubleclick.cn, DNS:*.fls.doubleclick.cn, DNS:*.g.doubleclick.cn, DNS:dartsearch-cn.net, DNS:*.dartsearch-cn.net, DNS:googletraveladservices-cn.com, DNS:*.googletraveladservices-cn.com, DNS:googletagservices-cn.com, DNS:*.googletagservices-cn.com, DNS:googletagmanager-cn.com, DNS:*.googletagmanager-cn.com, DNS:googlesyndication-cn.com, DNS:*.googlesyndication-cn.com, DNS:*.safeframe.googlesyndication-cn.com, DNS:app-measurement-cn.com, DNS:*.app-measurement-cn.com, DNS:gvt1-cn.com, DNS:*.gvt1-cn.com, DNS:gvt2-cn.com, DNS:*.gvt2-cn.com, DNS:2mdn-cn.net, DNS:*.2mdn-cn.net, DNS:googleflights-cn.net, DNS:*.googleflights-cn.net, DNS:admob-cn.com, DNS:*.admob-cn.com, DNS:googlesandbox-cn.com, DNS:*.googlesandbox-cn.com, DNS:*.safenup.googlesandbox-cn.com, DNS:*.gstatic.com, DNS:*.metric.gstatic.com, DNS:*.gvt1.com, DNS:*.gcpcdn.gvt1.com, DNS:*.gvt2.com, DNS:*.gcp.gvt2.com, DNS:*.url.google.com, DNS:*.youtube-nocookie.com, DNS:*.ytimg.com, DNS:android.com, DNS:*.android.com, DNS:*.flash.android.com, DNS:g.cn, DNS:*.g.cn, DNS:g.co, DNS:*.g.co, DNS:goo.gl, DNS:www.goo.gl, DNS:google-analytics.com, DNS:*.google-analytics.com, DNS:google.com, DNS:googlecommerce.com, DNS:*.googlecommerce.com, DNS:ggpht.cn, DNS:*.ggpht.cn, DNS:urchin.com, DNS:*.urchin.com, DNS:youtu.be, DNS:youtube.com, DNS:*.youtube.com, DNS:youtubeeducation.com, DNS:*.youtubeeducation.com, DNS:youtubekids.com, DNS:*.youtubekids.com, DNS:yt.be, DNS:*.yt.be, DNS:android.clients.google.com, DNS:developer.android.google.cn, DNS:developers.android.google.cn, DNS:source.android.google.cn, DNS:developer.chrome.google.cn, DNS:web.developers.google.cn, DNS:codelabs.developers.google.cn
+            X509v3 Certificate Policies: 
+                Policy: 2.23.140.1.2.1
+                Policy: 1.3.6.1.4.1.11129.2.5.3
+
+            X509v3 CRL Distribution Points: 
+
+                Full Name:
+                  URI:http://crls.pki.goog/gts1c3/QOvJ0N1sT2A.crl
+
+            CT Precertificate SCTs: 
+                Signed Certificate Timestamp:
+                    Version   : v1(0)
+                    Log ID    : EE:CD:D0:64:D5:DB:1A:CE:C5:5C:B7:9D:B4:CD:13:A2:
+                                32:87:46:7C:BC:EC:DE:C3:51:48:59:46:71:1F:B5:9B
+                    Timestamp : May 21 06:32:05.831 2024 GMT
+                    Extensions: none
+                    Signature : ecdsa-with-SHA256
+                                30:46:02:21:00:F2:5F:B9:99:73:68:86:B0:DB:26:C4:
+                                83:3C:5E:EF:BA:EF:08:60:97:F9:3C:4C:8E:1D:5B:F0:
+                                99:61:00:98:2D:02:21:00:9E:C8:B4:7D:35:88:A6:54:
+                                C9:ED:A6:33:19:50:99:97:A3:52:EC:7A:AF:D0:87:68:
+                                BC:F7:FE:AB:64:2D:DC:35
+                Signed Certificate Timestamp:
+                    Version   : v1(0)
+                    Log ID    : 48:B0:E3:6B:DA:A6:47:34:0F:E5:6A:02:FA:9D:30:EB:
+                                1C:52:01:CB:56:DD:2C:81:D9:BB:BF:AB:39:D8:84:73
+                    Timestamp : May 21 06:32:05.869 2024 GMT
+                    Extensions: none
+                    Signature : ecdsa-with-SHA256
+                                30:45:02:20:42:70:01:5C:AB:48:D7:4C:21:9B:43:85:
+                                A8:4D:EB:CC:B8:D4:EA:01:53:A8:31:FA:7E:0C:7E:62:
+                                DB:A2:4C:9B:02:21:00:B4:08:0A:6F:D3:05:8E:E2:D1:
+                                8D:DD:D5:AB:80:03:91:27:8E:23:41:70:02:F0:F0:98:
+                                D4:37:C4:EB:C7:F1:32
+    Signature Algorithm: sha256WithRSAEncryption
+         85:66:b6:a2:a1:66:54:2f:eb:f5:58:f8:2a:fc:69:6d:82:6c:
+         37:66:75:f1:df:0b:3e:70:3c:ec:4b:d8:8b:62:4e:8f:fb:db:
+         4d:bf:9a:fe:53:da:ff:db:c5:22:0b:2a:90:79:0c:f7:a5:77:
+         05:ba:31:13:db:6a:31:27:cc:ba:ae:d6:43:a9:85:45:ac:ad:
+         52:63:a5:84:42:27:0e:61:dd:93:58:f8:09:8b:b1:7d:2f:32:
+         5e:09:8a:98:1b:56:43:2f:9b:09:96:5d:3e:00:6f:21:63:6d:
+         66:0d:ac:97:df:ec:9d:e0:f6:35:fe:41:b5:4e:89:d4:c6:67:
+         7e:a4:91:35:e7:a3:56:d5:fe:a5:d8:30:4a:8a:12:2c:f3:79:
+         1a:da:bc:fc:7b:39:56:94:2a:aa:a2:96:54:02:ed:1a:0a:3c:
+         8d:5a:42:db:a4:2c:5a:11:05:36:24:35:27:62:c6:f1:39:14:
+         3c:4d:94:c6:ca:72:2d:82:ef:d5:6b:2a:02:31:73:06:b8:c7:
+         34:ef:ff:88:5a:c1:71:30:d8:e3:95:6b:7e:e2:22:48:ea:2e:
+         40:8f:51:0f:7e:ce:e4:72:a4:50:b3:ce:00:48:3c:6f:97:f7:
+         60:bf:4c:97:97:12:32:1f:e8:9c:82:a4:d5:51:21:91:ce:e2:
+         8c:c3:a0:8a
